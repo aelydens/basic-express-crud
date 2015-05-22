@@ -1,0 +1,8 @@
+h1 Add a new Classroom
+
+div
+  form(name="newClassroom", action="/classrooms", method="post")
+    input(type="text", name="name")
+    input(type="checkbox", name="hasKeg", checked=(true===false ? "checked" : undefined))
+    input(type="number", name="numberOfSeats")
+    input(type="submit", value="Create a new Classroom")

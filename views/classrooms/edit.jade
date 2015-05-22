@@ -1,0 +1,10 @@
+h1 Edit Classroom: #{classroom.name}
+
+h2 The classroom #{classroom.name} has #{classroom.numberOfSeats} seats in it.
+
+div
+  form(name="editClassroom", action="/classrooms/#{classroom._id}", method="post")
+    input(type="text", name="name", value="#{classroom.name}")
+    input(type="checkbox", name="hasKeg", checked=(true===false ? "checked" : undefined))
+    input(type="number", name="numberOfSeats", value="#{classroom.numberOfSeats}")
+    input(type="submit", value="Update your Classroom")

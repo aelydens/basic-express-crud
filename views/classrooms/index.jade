@@ -1,0 +1,8 @@
+h1 List of All Classrooms
+
+ul
+  each classroom in classrooms
+    li= classroom.name + ' has ' + classroom.numberOfSeats + ' seats in it. '
+    a(href="/classrooms/#{classroom._id}") See Details
+
+a(href="/classrooms/new") Add a new Classroom

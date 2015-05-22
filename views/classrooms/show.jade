@@ -1,0 +1,14 @@
+h1 'Details for classroom #{classroom.name}'
+
+p This classroom seats #{classroom.numberOfSeats}
+
+if classroom.hasKeg
+  p has keg
+else
+  p has no keg
+p
+  button
+    a(href="/classrooms/edit/#{classroom.id}/" style="text-decoration: none;") Edit this classroom
+
+  form(method="POST" action="/classrooms/#{classroom._id}/delete")
+    input(type="submit" value="Delete")
